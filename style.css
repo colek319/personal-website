@@ -7,4 +7,58 @@
 header
 {
     background-color: white;
+    align 
+}
+
+body
+{
+    background-color=white;
+}
+
+.mainMenu {
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #cc00ff;
+    width: 200px;    /* Block elements take up the ful width of page by default  */
+}
+
+li a {
+    display: block; /* displaying the block elements makes the whole block clickable
+		       Specifies width and padding*/
+    padding: 8px 16px;
+    color: #000;
+    text-decoration: none;
+}
+
+/*object:hover runs the block below when the mouse hovers the object*/
+li a.active {
+    background-color: #f5ccff;
+    color: #000;
+}
+
+li a:hover:not(.active) {
+    background-color: #f5ccff;
+    color: #000;
+}
+
+/* polyline class  */
+
+.menuLine {
+    fill:none;
+    stroke-width:"2";
+    stroke-dasharray:50;
+    stroke:#cc00ff;
+    animation: menuLine .5s reverse ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menuLine {
+    to {
+	stroke-dashoffset: 50;
+    }
 }
