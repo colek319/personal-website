@@ -7,7 +7,6 @@
 header
 {
     background-color: white;
-    align 
 }
 
 body
@@ -15,50 +14,57 @@ body
     background-color=white;
 }
 
-.mainMenu {
-
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #cc00ff;
-    width: 200px;    /* Block elements take up the ful width of page by default  */
-}
-
-li a {
-    display: block; /* displaying the block elements makes the whole block clickable
-		       Specifies width and padding*/
-    padding: 8px 16px;
+#mainMenu .dropbtn {
     color: #000;
-    text-decoration: none;
+    background-color:#f2f2f2;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#mainMenu {
+    display: inline-block; 
+    position: relative;
+}
+
+
+
+
+/*-----------MAIN-NAV--------------*/
+
+
+.main-nav {
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    min-width: 200px;    /* Block elements take up the ful width of page by default  */
+    z-index: 1;
 }
 
 /*object:hover runs the block below when the mouse hovers the object*/
-li a.active {
-    background-color: #f5ccff;
+.main-nav a {
+    color: black;
+    padding: 8px 16px; 
+    text-decoration: none;
+    display: block;
+}
+
+.main-nav a.active {
+    background-color: #bfbfbf; 
     color: #000;
 }
 
-li a:hover:not(.active) {
-    background-color: #f5ccff;
+.main-nav a:hover:not(.active) {
+    background-color: #bfbfbf;
     color: #000;
 }
 
-/* polyline class  */
-
-.menuLine {
-    fill:none;
-    stroke-width:"2";
-    stroke-dasharray:50;
-    stroke:#cc00ff;
-    animation: menuLine .5s reverse ease-out;
-    animation-fill-mode: forwards;
+.main-nav .dropbtn:hover {
+    background-color: #bfbfbf;
 }
 
-@keyframes menuLine {
-    to {
-	stroke-dashoffset: 50;
-    }
+
+.show {
+    display: inline-block;
 }
